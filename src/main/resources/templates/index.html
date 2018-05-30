@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Test</title>
+</head>
+<body>
+	<form method="post" th:action="@{/{id}(id=*{id})}" th:object="${person}">
+		<label>Last name:
+		<input th:field="*{lastname}" autofocus /></label>
+		 <input type="submit" value="Save" />
+	</form>
+</body>
+</html>
